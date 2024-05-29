@@ -19,6 +19,6 @@ import static net.minecraft.world.item.crafting.Ingredient.of;
 public class BMDBlocks {
     public static final BlockSubRegistryHelper HELPER = BuryMeDeep.REGISTRY_HELPER.getBlockSubHelper();
     public static final RegistryObject<Block> CURIOUS_SAND = HELPER.createBlock("curious_sand", () -> new CuriousBlock(Block.Properties.copy(Blocks.SUSPICIOUS_SAND), Blocks.SAND, Blocks.SUSPICIOUS_SAND));
-    public static final RegistryObject<Block> CURIOUS_GRAVEL = HELPER.createBlock("curious_gravel", () -> new CuriousBlock(Block.Properties.copy(Blocks.SUSPICIOUS_SAND), Blocks.GRAVEL, Blocks.SUSPICIOUS_GRAVEL));
+    public static final RegistryObject<Block> CURIOUS_GRAVEL = HELPER.createBlock("curious_gravel", () -> new CuriousBlock(Block.Properties.copy(Blocks.SUSPICIOUS_GRAVEL), Blocks.GRAVEL, Blocks.SUSPICIOUS_GRAVEL));
 
 }
