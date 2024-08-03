@@ -13,9 +13,7 @@ authors = "DavigJ"
 credits = "Zym, and Jsburg for LocalCaptures"
 displayURL = "https://modrinth.com/project/bury-me-deep"
 displayName = "Bury Me Deep"
-description = '''
-    Brushing sand and gravel allows players to deposit item stacks, allowing them to make their own suspicious blocks.
-    '''
+description = '''Players can make their own suspicious blocks using brushes.'''
 
 [[dependencies.bury_me_deep]]
 modId = "minecraft"
