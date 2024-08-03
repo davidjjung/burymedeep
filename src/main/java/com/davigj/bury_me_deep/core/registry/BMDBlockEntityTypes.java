@@ -16,6 +16,7 @@ public class BMDBlockEntityTypes {
     public static final RegistryObject<BlockEntityType<CuriousBlockEntity>> CURIOUS_BLOCK =
             HELPER.createBlockEntity("curious_block", CuriousBlockEntity::new, () -> Set.of(
                     BMDBlocks.CURIOUS_SAND.get(),
-                    BMDBlocks.CURIOUS_GRAVEL.get()
+                    BMDBlocks.CURIOUS_GRAVEL.get(),
+                    BMDBlocks.CURIOUS_COARSE_DIRT.get()
             ));
 }

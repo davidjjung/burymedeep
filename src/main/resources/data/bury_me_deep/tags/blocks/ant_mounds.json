@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "spawn:anthill",
+      "required": false
+    },
+    {
+      "id": "spawn:ant_mound",
+      "required": false
+    },
+    {
+      "id": "spawn:rotten_log_anthill",
+      "required": false
+    }
+  ]
+}
