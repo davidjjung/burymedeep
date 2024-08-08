@@ -5,7 +5,6 @@
   "minVersion": "0.8",
   "refmap": "bury_me_deep.refmap.json",
   "mixins": [
-    "BrushItemMixin"
   ],
   "client": [
   ],
