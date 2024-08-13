@@ -7,7 +7,10 @@ import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.Fallable;
+import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -18,16 +21,16 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
+import java.util.Map;
+
+import static com.davigj.bury_me_deep.core.other.BMDConstants.CURIOUS_TO_SUS_MAP;
+import static com.davigj.bury_me_deep.core.other.BMDConstants.SAD_TO_CURIOUS_MAP;
 
 public class CuriousBlock extends Block implements EntityBlock, Fallable {
     public static final IntegerProperty DUSTED = BlockStateProperties.DUSTED;
-    Block sad;
-    Block sus;
 
-    public CuriousBlock(Properties p_49795_, Block sad, Block sus) {
+    public CuriousBlock(Properties p_49795_) {
         super(p_49795_);
-        this.sad = sad;
-        this.sus = sus;
         this.registerDefaultState(this.stateDefinition.any().setValue(DUSTED, 3));
     }
 
@@ -36,11 +39,20 @@ public class CuriousBlock extends Block implements EntityBlock, Fallable {
     }
 
     public Block getSad() {
-        return this.sad;
+        return getKey(SAD_TO_CURIOUS_MAP, this.defaultBlockState().getBlock());
+    }
+
+    public <K, V> K getKey(Map<K, V> map, V value) {
+        for (Map.Entry<K, V> entry : map.entrySet()) {
+            if (entry.getValue().equals(value)) {
+                return entry.getKey();
+            }
+        }
+        return null;
     }
 
     public Block getSus() {
-        return this.sus;
+        return CURIOUS_TO_SUS_MAP.get(this.asBlock());
     }
 
     public void animateTick(BlockState p_277390_, Level p_277525_, BlockPos p_278107_, RandomSource p_277574_) {

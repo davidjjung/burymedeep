@@ -12,12 +12,12 @@ import net.minecraft.world.level.block.BrushableBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.fml.ModList;
 
-import static com.davigj.bury_me_deep.core.other.BMDConstants.CURIO_MAP;
+import static com.davigj.bury_me_deep.core.other.BMDConstants.SAD_TO_CURIOUS_MAP;
 
 public class BMDMixinDebugUtil {
     public static void onUseTick(Level level, int remainingUseTicks, BlockPos pos, BlockState state) {
         Block block = state.getBlock();
-        if (CURIO_MAP.containsKey(block) && remainingUseTicks < 200 - 18) {
+        if (SAD_TO_CURIOUS_MAP.containsKey(block) && remainingUseTicks < 200 - 18) {
             if (block == Blocks.COARSE_DIRT && ModList.get().isLoaded("spawn")) {
                 int i = 0;
                 for (Direction direction : Direction.values()) {
@@ -29,7 +29,7 @@ public class BMDMixinDebugUtil {
                 }
                 if (i == 0) return;
             }
-            BlockState turnsInto = CURIO_MAP.get(block).defaultBlockState();
+            BlockState turnsInto = SAD_TO_CURIOUS_MAP.get(block).defaultBlockState();
             level.setBlock(pos, turnsInto, 3);
             if (turnsInto.getBlock() instanceof CuriousBlock curio) {
                 level.playSound(null, pos, ((BrushableBlock)curio.getSus()).getBrushSound(), SoundSource.BLOCKS, 1.2F, 2.0F);

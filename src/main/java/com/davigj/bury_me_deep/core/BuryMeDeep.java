@@ -33,7 +33,8 @@ public class BuryMeDeep {
 
     private void commonSetup(FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            curioMap();
+            stcMap();
+            ctsMap();
         });
     }
     private void clientSetup(FMLClientSetupEvent event) {
