@@ -2,6 +2,7 @@ package com.davigj.bury_me_deep.core.other;
 
 import com.davigj.bury_me_deep.core.registry.BMDBlocks;
 import com.ninni.species.registry.SpeciesBlocks;
+import net.jadenxgamer.netherexp.registry.block.JNEBlocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.fml.ModList;
@@ -16,6 +17,7 @@ public class BMDConstants {
 
     public static final Block antMound;
     public static final Block redSus;
+    public static final Block soulSus;
 
     public static void stcMap() {
         SAD_TO_CURIOUS_MAP.put(Blocks.SAND, BMDBlocks.CURIOUS_SAND.get());
@@ -25,6 +27,9 @@ public class BMDConstants {
         }
         if (ModList.get().isLoaded("species")) {
             SAD_TO_CURIOUS_MAP.put(Blocks.RED_SAND, BMDBlocks.RED_CURIOUS_SAND.get());
+        }
+        if (ModList.get().isLoaded("netherexp")) {
+            SAD_TO_CURIOUS_MAP.put(Blocks.SOUL_SAND, BMDBlocks.CURIOUS_SOUL_SAND.get());
         }
     }
 
@@ -37,10 +42,14 @@ public class BMDConstants {
         if (ModList.get().isLoaded("species")) {
             CURIOUS_TO_SUS_MAP.put(BMDBlocks.RED_CURIOUS_SAND.get(), redSus);
         }
+        if (ModList.get().isLoaded("netherexp")) {
+            CURIOUS_TO_SUS_MAP.put(BMDBlocks.CURIOUS_SOUL_SAND.get(), soulSus);
+        }
     }
 
     static {
         antMound = !ModList.get().isLoaded("spawn") ? Blocks.COARSE_DIRT : SpawnBlocks.ANT_MOUND.get();
         redSus = !ModList.get().isLoaded("species") ? Blocks.COARSE_DIRT : SpeciesBlocks.RED_SUSPICIOUS_SAND.get();
+        soulSus = !ModList.get().isLoaded("netherexp") ? Blocks.SOUL_SAND : JNEBlocks.SUSPICIOUS_SOUL_SAND.get();
     }
 }

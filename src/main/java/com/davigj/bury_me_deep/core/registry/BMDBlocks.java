@@ -17,5 +17,6 @@ public class BMDBlocks {
     public static final RegistryObject<Block> CURIOUS_GRAVEL = HELPER.createBlock("curious_gravel", () -> new CuriousBlock(Block.Properties.copy(Blocks.SUSPICIOUS_GRAVEL)));
     public static final RegistryObject<Block> CURIOUS_COARSE_DIRT = HELPER.createBlock("curious_coarse_dirt", () -> new CuriousBlock(Block.Properties.copy(Blocks.COARSE_DIRT)));
     public static final RegistryObject<Block> RED_CURIOUS_SAND = HELPER.createBlock("red_curious_sand", () -> new CuriousBlock(Block.Properties.copy(Blocks.RED_SAND)));
+    public static final RegistryObject<Block> CURIOUS_SOUL_SAND = HELPER.createBlock("curious_soul_sand", () -> new CuriousBlock(Block.Properties.copy(Blocks.SOUL_SAND)));
 
 }
