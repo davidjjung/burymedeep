@@ -2,7 +2,6 @@ package com.davigj.bury_me_deep.core.registry;
 
 import com.davigj.bury_me_deep.common.block.CuriousBlock;
 import com.davigj.bury_me_deep.core.BuryMeDeep;
-import com.davigj.bury_me_deep.core.other.BMDConstants;
 import com.teamabnormals.blueprint.core.util.registry.BlockSubRegistryHelper;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -17,5 +16,6 @@ public class BMDBlocks {
     public static final RegistryObject<Block> CURIOUS_SAND = HELPER.createBlock("curious_sand", () -> new CuriousBlock(Block.Properties.copy(Blocks.SUSPICIOUS_SAND)));
     public static final RegistryObject<Block> CURIOUS_GRAVEL = HELPER.createBlock("curious_gravel", () -> new CuriousBlock(Block.Properties.copy(Blocks.SUSPICIOUS_GRAVEL)));
     public static final RegistryObject<Block> CURIOUS_COARSE_DIRT = HELPER.createBlock("curious_coarse_dirt", () -> new CuriousBlock(Block.Properties.copy(Blocks.COARSE_DIRT)));
+    public static final RegistryObject<Block> RED_CURIOUS_SAND = HELPER.createBlock("red_curious_sand", () -> new CuriousBlock(Block.Properties.copy(Blocks.RED_SAND)));
 
 }

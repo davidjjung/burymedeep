@@ -17,6 +17,7 @@ public class BMDBlockEntityTypes {
             HELPER.createBlockEntity("curious_block", CuriousBlockEntity::new, () -> Set.of(
                     BMDBlocks.CURIOUS_SAND.get(),
                     BMDBlocks.CURIOUS_GRAVEL.get(),
-                    BMDBlocks.CURIOUS_COARSE_DIRT.get()
+                    BMDBlocks.CURIOUS_COARSE_DIRT.get(),
+                    BMDBlocks.RED_CURIOUS_SAND.get()
             ));
 }
