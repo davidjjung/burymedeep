@@ -2,6 +2,7 @@ package com.davigj.bury_me_deep.core.other;
 
 import com.davigj.bury_me_deep.common.block.CuriousBlock;
 import com.davigj.bury_me_deep.common.block.entity.CuriousBlockEntity;
+import com.davigj.bury_me_deep.core.BMDConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundSource;
@@ -14,7 +15,7 @@ import net.minecraftforge.fml.ModList;
 
 import static com.davigj.bury_me_deep.core.other.BMDConstants.SAD_TO_CURIOUS_MAP;
 
-public class BMDMixinDebugUtil {
+public class BMDUseTickEventUtil {
     public static void onUseTick(Level level, int remainingUseTicks, BlockPos pos, BlockState state) {
         Block block = state.getBlock();
         if (SAD_TO_CURIOUS_MAP.containsKey(block) && remainingUseTicks < 200 - 18) {
