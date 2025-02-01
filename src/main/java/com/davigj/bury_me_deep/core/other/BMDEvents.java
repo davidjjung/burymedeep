@@ -20,8 +20,7 @@ public class BMDEvents {
                 event.getEntity() instanceof Player player) {
             HitResult result = brush.calculateHitResult(player);
             if (result instanceof BlockHitResult bhr && result.getType() == HitResult.Type.BLOCK) {
-                int $$9 = brush.getUseDuration(event.getItem()) - event.getDuration() + 1;
-                boolean $$10 = $$9 % 10 == 5;
+                boolean $$10 = event.getDuration() % 25 == 5;
                 if ($$10) {
                     Level level = player.level();
                     BlockPos $$11 = bhr.getBlockPos();

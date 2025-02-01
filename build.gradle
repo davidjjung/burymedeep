@@ -82,7 +82,6 @@ dependencies {
     compileOnly fg.deobf("maven.modrinth:species:6ZvnLcTh")
     compileOnly fg.deobf("maven.modrinth:jadens-nether-expansion:wcJNDsEi")
     compileOnly fg.deobf("maven.modrinth:elysium-api:wcq14XyS")
-
     compileOnly fg.deobf("maven.modrinth:atmospheric:wFKEIHk8")
 
     compileOnly fg.deobf("mezz.jei:jei-${project.minecraft}-common-api:${project.jei}")
