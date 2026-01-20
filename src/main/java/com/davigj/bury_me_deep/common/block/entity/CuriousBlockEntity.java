@@ -1,6 +1,7 @@
 package com.davigj.bury_me_deep.common.block.entity;
 
 import com.davigj.bury_me_deep.common.block.CuriousBlock;
+import com.davigj.bury_me_deep.core.mixin.IBrushableBlockEntityAccessor;
 import com.davigj.bury_me_deep.core.registry.BMDBlockEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
@@ -10,7 +11,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BrushableBlock;
@@ -49,7 +49,7 @@ public class CuriousBlockEntity extends BlockEntity {
                     level.setBlock(pos, converted, 3);
                     BlockEntity blockEntity = level.getBlockEntity(pos);
                     if (blockEntity instanceof BrushableBlockEntity brushable) {
-                        brushable.item = entity.cargo;
+                        ((IBrushableBlockEntityAccessor)brushable).setItem(entity.cargo);
                         level.playSound(null, pos, ((BrushableBlock)sus).getBrushCompletedSound(), SoundSource.BLOCKS, 0.8F, 1.0F);
                     }
                     return;

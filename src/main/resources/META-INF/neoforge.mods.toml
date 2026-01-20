@@ -1,37 +1,40 @@
 modLoader = "javafml"
-loaderVersion = "[47,)"
+loaderVersion = "[1,)"
 issueTrackerURL = "https://github.com/davidjjung/burymedeep/issues"
 license = "MIT License"
 
+[[mixins]]
+config = "bury_me_deep.mixins.json"
+
 [[mods]]
 modId = "bury_me_deep"
-version = "${file.jarVersion}"
+version = "${mod_version}"
 logoFile = "logo.png"
 itemIcon = "minecraft:suspicious_sand_3"
 configBackground = "minecraft:textures/block/suspicious_gravel.png"
 authors = "DavigJ"
-credits = "Zym, and Jsburg for LocalCaptures"
+credits = "Zym, Jsburg"
 displayURL = "https://modrinth.com/project/bury-me-deep"
 displayName = "Bury Me Deep"
 description = '''Players can make their own suspicious blocks using brushes.'''
 
 [[dependencies.bury_me_deep]]
 modId = "minecraft"
-mandatory = true
-versionRange = "[1.20.1,1.21)"
-ordering = "NONE"
+type = "required"
+versionRange = "[${mc_version}]"
+ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.bury_me_deep]]
-modId = "forge"
-mandatory = true
-versionRange = "[47.1.3,)"
-ordering = "NONE"
+modId = "neoforge"
+type = "required"
+versionRange = "[${neoforge},)"
+ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.bury_me_deep]]
 modId = "blueprint"
-mandatory = true
-versionRange = "[7.1.0,)"
+type = "required"
+versionRange = "[${blueprint},)"
 ordering = "AFTER"
 side = "BOTH"

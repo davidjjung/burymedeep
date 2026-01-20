@@ -2,7 +2,6 @@ package com.davigj.bury_me_deep.core.other;
 
 import com.davigj.bury_me_deep.common.block.CuriousBlock;
 import com.davigj.bury_me_deep.common.block.entity.CuriousBlockEntity;
-import com.davigj.bury_me_deep.core.BMDConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundSource;
@@ -11,7 +10,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BrushableBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.fml.ModList;
+import net.neoforged.fml.ModList;
 
 import static com.davigj.bury_me_deep.core.other.BMDConstants.SAD_TO_CURIOUS_MAP;
 
