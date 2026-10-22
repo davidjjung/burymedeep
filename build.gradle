@@ -47,11 +47,28 @@ sourceSets.main.resources {
 dependencies {
     implementation "net.neoforged:neoforge:${project.neoforge}"
     implementation("com.teamabnormals:blueprint:${project.mc_version}-${project.blueprint}")
-    compileOnly("maven.modrinth:spawn-mod:RXKJiHaV")
-    compileOnly("maven.modrinth:species:6ZvnLcTh")
-    compileOnly("maven.modrinth:jadens-nether-expansion:wcJNDsEi")
-    compileOnly("maven.modrinth:elysium-api:wcq14XyS")
+    compileOnly("maven.modrinth:spawn-mod:OgmUYgeL")
+    compileOnly("maven.modrinth:teallib:lZTBRemW")
     compileOnly("maven.modrinth:atmospheric:XIvPRE4O")
+    compileOnly("maven.modrinth:abundant-atmosphere:f4RDisga")
+    compileOnly("maven.modrinth:biolith:EAjbdreT")
+    compileOnly("maven.modrinth:windswept:4IuP7gWB")
+
+    compileOnly("maven.modrinth:lodestonelib:CohX6yP1")
+    compileOnly("maven.modrinth:jadens-nether-expansion:NactTrv2")
+    compileOnly("maven.modrinth:elysium-api:d2JaQ362")
+
+    runtimeOnly("maven.modrinth:spawn-mod:OgmUYgeL")
+    runtimeOnly("maven.modrinth:teallib:lZTBRemW")
+    runtimeOnly("maven.modrinth:atmospheric:XIvPRE4O")
+    runtimeOnly("maven.modrinth:abundant-atmosphere:f4RDisga")
+    runtimeOnly("maven.modrinth:biolith:EAjbdreT")
+    runtimeOnly("maven.modrinth:windswept:4IuP7gWB")
+
+    runtimeOnly("maven.modrinth:lodestonelib:CohX6yP1")
+    runtimeOnly("maven.modrinth:jadens-nether-expansion:NactTrv2")
+    runtimeOnly("maven.modrinth:elysium-api:d2JaQ362")
+
 
     compileOnly("mezz.jei:jei-${project.mc_version}-neoforge-api:${project.jei}")
     runtimeOnly("mezz.jei:jei-${project.mc_version}-neoforge:${project.jei}")

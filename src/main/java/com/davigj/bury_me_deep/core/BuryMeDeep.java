@@ -11,9 +11,6 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
-import static com.davigj.bury_me_deep.core.other.BMDConstants.ctsMap;
-import static com.davigj.bury_me_deep.core.other.BMDConstants.stcMap;
-
 @Mod(BuryMeDeep.MOD_ID)
 public class BuryMeDeep {
     public static final String MOD_ID = "bury_me_deep";
@@ -31,10 +28,6 @@ public class BuryMeDeep {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            stcMap();
-            ctsMap();
-        });
     }
 
     private void clientSetup(FMLClientSetupEvent event) {

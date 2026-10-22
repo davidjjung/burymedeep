@@ -1,57 +1,39 @@
 package com.davigj.bury_me_deep.core.other;
 
-import com.davigj.bury_me_deep.core.other.compat.BMDAtmosphericCompat;
-import com.davigj.bury_me_deep.core.other.compat.BMDModConstants;
+import com.davigj.bury_me_deep.core.other.compat.*;
 import com.davigj.bury_me_deep.core.registry.BMDBlocks;
-import com.teamabnormals.atmospheric.core.registry.AtmosphericBlocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.neoforged.fml.ModList;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.davigj.bury_me_deep.core.other.compat.BMDModConstants.*;
 
 public class BMDConstants {
-    public static final Map<Block, Block> SAD_TO_CURIOUS_MAP = new HashMap<>();
-    public static final Map<Block, Block> CURIOUS_TO_SUS_MAP = new HashMap<>();
+    public static final List<BrushableTrio> TRIOS = new ArrayList<>();
 
-//    public static final Block antMound;
-//    public static final Block redSus;
-//    public static final Block soulSus;
-
-    public static void stcMap() {
-        SAD_TO_CURIOUS_MAP.put(Blocks.SAND, BMDBlocks.CURIOUS_SAND.get());
-        SAD_TO_CURIOUS_MAP.put(Blocks.GRAVEL, BMDBlocks.CURIOUS_GRAVEL.get());
-//        if (ModList.get().isLoaded("spawn")) {
-//            SAD_TO_CURIOUS_MAP.put(Blocks.COARSE_DIRT, BMDBlocks.CURIOUS_COARSE_DIRT.get());
-//        }
-//        if (ModList.get().isLoaded("species")) {
-//            SAD_TO_CURIOUS_MAP.put(Blocks.RED_SAND, BMDBlocks.RED_CURIOUS_SAND.get());
-//        }
-//        if (ModList.get().isLoaded("netherexp")) {
-//            SAD_TO_CURIOUS_MAP.put(Blocks.SOUL_SAND, BMDBlocks.CURIOUS_SOUL_SAND.get());
-//        }
-        if (ModList.get().isLoaded("atmospheric")) {
-            SAD_TO_CURIOUS_MAP.put(AtmosphericBlocks.ARID_SAND.get(), BMDBlocks.CURIOUS_ARID_SAND.get());
-            SAD_TO_CURIOUS_MAP.put(AtmosphericBlocks.RED_ARID_SAND.get(), BMDBlocks.RED_CURIOUS_ARID_SAND.get());
-        }
+    static {
+        addTrio(Blocks.SAND, BMDBlocks.CURIOUS_SAND.get(), Blocks.SUSPICIOUS_SAND);
+        addTrio(Blocks.GRAVEL, BMDBlocks.CURIOUS_GRAVEL.get(), Blocks.SUSPICIOUS_GRAVEL);
+        if (ATMOSPHERIC) BMDAtmosphericCompat.addTrios();
+        if (SPAWN) BMDSpawnCompat.addTrios();
+        if (WINDSWEPT) BMDWindsweptCompat.addTrios();
+        if (AA) BMDAACompat.addTrios();
+        if (JNE) BMDJNECompat.addTrios();
     }
 
-    public static void ctsMap() {
-        CURIOUS_TO_SUS_MAP.put(BMDBlocks.CURIOUS_SAND.get(), Blocks.SUSPICIOUS_SAND);
-        CURIOUS_TO_SUS_MAP.put(BMDBlocks.CURIOUS_GRAVEL.get(), Blocks.SUSPICIOUS_GRAVEL);
-//        if (ModList.get().isLoaded("spawn")) {
-//            CURIOUS_TO_SUS_MAP.put(BMDBlocks.CURIOUS_COARSE_DIRT.get(), antMound);
-//        }
-//        if (ModList.get().isLoaded("species")) {
-//            CURIOUS_TO_SUS_MAP.put(BMDBlocks.RED_CURIOUS_SAND.get(), redSus);
-//        }
-//        if (ModList.get().isLoaded("netherexp")) {
-//            CURIOUS_TO_SUS_MAP.put(BMDBlocks.CURIOUS_SOUL_SAND.get(), soulSus);
-//        }
-        if (BMDModConstants.ATMOSPHERIC) {
-            BMDAtmosphericCompat.addBlocks(CURIOUS_TO_SUS_MAP);
-        }
+    public static void addTrio(Block boring, Block curious, Block sus) {
+        TRIOS.add(new BrushableTrio(boring, curious, sus));
     }
 
+    public static BrushableTrio getTrio(Block curious) {
+        return TRIOS.stream().filter(trio -> trio.curious() == curious).findFirst().orElse(null);
+    }
+
+    public static BrushableTrio getTrioFromBoring(Block boring) {
+        return TRIOS.stream().filter(trio -> trio.boring() == boring).findFirst().orElse(null);
+    }
+
+    public record BrushableTrio(Block boring, Block curious, Block sus) {}
 }
