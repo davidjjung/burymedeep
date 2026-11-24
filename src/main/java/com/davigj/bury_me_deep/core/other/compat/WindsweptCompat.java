@@ -6,9 +6,9 @@ import com.rosemods.windswept.core.registry.WindsweptBlocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
-import static com.davigj.bury_me_deep.core.other.compat.BMDModConstants.WINDSWEPT;
+import static com.davigj.bury_me_deep.core.other.compat.ModConstants.WINDSWEPT;
 
-public class BMDWindsweptCompat {
+public class WindsweptCompat {
     public static final Block susSnow;
 
     public static void addTrios() {

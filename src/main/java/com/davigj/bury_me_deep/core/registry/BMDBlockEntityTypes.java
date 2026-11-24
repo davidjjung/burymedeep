@@ -20,6 +20,8 @@ public class BMDBlockEntityTypes {
                     BMDBlocks.CURIOUS_SOUL_SAND.get(),
                     BMDBlocks.CURIOUS_SNOW.get(),
                     BMDBlocks.CURIOUS_ARID_SAND.get(),
-                    BMDBlocks.RED_CURIOUS_ARID_SAND.get()
+                    BMDBlocks.RED_CURIOUS_ARID_SAND.get(),
+                    BMDBlocks.CURIOUS_ASHEN_SAND.get(),
+                    BMDBlocks.RED_CURIOUS_SAND_SPECIES.get()
             ));
 }

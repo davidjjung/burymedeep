@@ -17,8 +17,10 @@ public class BMDBlocks {
 
     public static final Supplier<Block> CURIOUS_SAND = BLOCKS.createBlock("curious_sand", () -> new CuriousBlock(Block.Properties.ofFullCopy(Blocks.SUSPICIOUS_SAND)));
     public static final Supplier<Block> CURIOUS_GRAVEL = BLOCKS.createBlock("curious_gravel", () -> new CuriousBlock(Block.Properties.ofFullCopy(Blocks.SUSPICIOUS_GRAVEL)));
+    public static final Supplier<Block> CURIOUS_ASHEN_SAND = BLOCKS.createBlock("curious_ashen_sand", () -> new CuriousBlock(Block.Properties.ofFullCopy(Blocks.SUSPICIOUS_GRAVEL)));
     public static final Supplier<Block> CURIOUS_COARSE_DIRT = BLOCKS.createBlock("curious_coarse_dirt", () -> new CuriousBlock(Block.Properties.ofFullCopy(Blocks.COARSE_DIRT)));
     public static final Supplier<Block> RED_CURIOUS_SAND = BLOCKS.createBlock("red_curious_sand", () -> new CuriousBlock(Block.Properties.ofFullCopy(Blocks.RED_SAND)));
+    public static final Supplier<Block> RED_CURIOUS_SAND_SPECIES = BLOCKS.createBlock("red_curious_sand_species", () -> new CuriousBlock(Block.Properties.ofFullCopy(Blocks.RED_SAND)));
     public static final Supplier<Block> CURIOUS_SOUL_SAND = BLOCKS.createBlock("curious_soul_sand", () -> new CuriousBlock(Block.Properties.ofFullCopy(Blocks.SOUL_SAND)));
     public static final Supplier<Block> CURIOUS_SNOW = BLOCKS.createBlock("curious_snow", () -> new CuriousBlock(Block.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
     public static final Supplier<Block> CURIOUS_ARID_SAND = BLOCKS.createBlock("curious_arid_sand", () -> new CuriousBlock(Block.Properties.ofFullCopy(Blocks.SUSPICIOUS_SAND)));

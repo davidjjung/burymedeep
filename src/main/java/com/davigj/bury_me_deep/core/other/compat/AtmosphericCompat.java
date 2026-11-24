@@ -6,9 +6,9 @@ import com.teamabnormals.atmospheric.core.registry.AtmosphericBlocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
-import static com.davigj.bury_me_deep.core.other.compat.BMDModConstants.ATMOSPHERIC;
+import static com.davigj.bury_me_deep.core.other.compat.ModConstants.ATMOSPHERIC;
 
-public class BMDAtmosphericCompat {
+public class AtmosphericCompat {
     public static final Block aridSus;
     public static final Block redAridSus;
     public static final Block arid;

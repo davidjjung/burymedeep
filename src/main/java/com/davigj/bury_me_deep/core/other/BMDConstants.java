@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.Blocks;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.davigj.bury_me_deep.core.other.compat.BMDModConstants.*;
+import static com.davigj.bury_me_deep.core.other.compat.ModConstants.*;
 
 public class BMDConstants {
     public static final List<BrushableTrio> TRIOS = new ArrayList<>();
@@ -16,11 +16,13 @@ public class BMDConstants {
     static {
         addTrio(Blocks.SAND, BMDBlocks.CURIOUS_SAND.get(), Blocks.SUSPICIOUS_SAND);
         addTrio(Blocks.GRAVEL, BMDBlocks.CURIOUS_GRAVEL.get(), Blocks.SUSPICIOUS_GRAVEL);
-        if (ATMOSPHERIC) BMDAtmosphericCompat.addTrios();
-        if (SPAWN) BMDSpawnCompat.addTrios();
-        if (WINDSWEPT) BMDWindsweptCompat.addTrios();
-        if (AA) BMDAACompat.addTrios();
-        if (JNE) BMDJNECompat.addTrios();
+        if (ATMOSPHERIC) AtmosphericCompat.addTrios();
+        if (SPAWN) SpawnCompat.addTrios();
+        if (WINDSWEPT) WindsweptCompat.addTrios();
+        if (AA) AACompat.addTrios();
+        if (JNE) JNECompat.addTrios();
+        if (BLASTED_BARRENS) BBCompat.addTrios();
+        if (SPECIES) SpeciesCompat.addTrios();
     }
 
     public static void addTrio(Block boring, Block curious, Block sus) {

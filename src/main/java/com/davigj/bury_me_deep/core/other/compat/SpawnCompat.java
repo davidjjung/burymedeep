@@ -6,9 +6,9 @@ import com.ninni.spawn.registry.SpawnBlocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
-import static com.davigj.bury_me_deep.core.other.compat.BMDModConstants.SPAWN;
+import static com.davigj.bury_me_deep.core.other.compat.ModConstants.SPAWN;
 
-public class BMDSpawnCompat {
+public class SpawnCompat {
     public static final Block antMound;
 
     public static void addTrios() {

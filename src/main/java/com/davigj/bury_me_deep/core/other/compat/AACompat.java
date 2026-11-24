@@ -6,9 +6,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.sheddmer.abundant_atmosphere.common.init.AABlocks;
 
-import static com.davigj.bury_me_deep.core.other.compat.BMDModConstants.AA;
+import static com.davigj.bury_me_deep.core.other.compat.ModConstants.AA;
 
-public class BMDAACompat {
+public class AACompat {
     public static final Block redSus;
 
     public static void addTrios() {

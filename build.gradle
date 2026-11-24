@@ -53,6 +53,8 @@ dependencies {
     compileOnly("maven.modrinth:abundant-atmosphere:f4RDisga")
     compileOnly("maven.modrinth:biolith:EAjbdreT")
     compileOnly("maven.modrinth:windswept:4IuP7gWB")
+    compileOnly("maven.modrinth:blasted-barrens:2.0.0")
+    compileOnly("maven.modrinth:species:pNcMJgD7")
 
     compileOnly("maven.modrinth:lodestonelib:CohX6yP1")
     compileOnly("maven.modrinth:jadens-nether-expansion:NactTrv2")
@@ -64,6 +66,8 @@ dependencies {
     runtimeOnly("maven.modrinth:abundant-atmosphere:f4RDisga")
     runtimeOnly("maven.modrinth:biolith:EAjbdreT")
     runtimeOnly("maven.modrinth:windswept:4IuP7gWB")
+    runtimeOnly("maven.modrinth:blasted-barrens:2.0.0")
+    runtimeOnly("maven.modrinth:species:pNcMJgD7")
 
     runtimeOnly("maven.modrinth:lodestonelib:CohX6yP1")
     runtimeOnly("maven.modrinth:jadens-nether-expansion:NactTrv2")
